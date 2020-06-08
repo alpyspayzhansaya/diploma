@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'scorecard/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
   <title>Profile page</title>
 </head>
 
@@ -12,7 +12,7 @@
   <header class = "header">
 	<div class = "container">
   		<div class= "inner">
-  			<a class= "logo" href=index.html>APPLICATION PAGE</a>
+            <a class="logo" href="/">Application page</a>
   			<nav>
   				<a class="nav_link" href=#>About us</a>
   				<a class="nav_link" href=#>Service</a>
@@ -24,8 +24,10 @@
   </header>
 	<div class = "profile">
   	<div class = "container">
-      <form id="formx">
-    		<h3><br> Please fill out all required fields</h3>
+      <form action="/" method="post">
+          {% csrf_token %}
+          {{ form }}
+    		<!-- <h3><br> Please fill out all required fields</h3>
         {% csrf_token %}
         {{ form.name.errors }}
         <label for="{{ form.name.id_for_label }}">Name </label>
@@ -65,9 +67,9 @@
         {{ form.income }}
         {{ form.additional_income.errors }}
         <label for="{{ form.additional_income.id_for_label }}">Additional income </label>
-        {{ form.additional_income }}
+        {{ form.additional_income }} -->
 
-    		<table id="info1" class="display:flex" style="width:100%">
+    		<!-- <table id="info1" class="display:flex" style="width:100%">
     			<thead>
     				<tr>
     					<th>{{ form.limit_bal.errors }}
@@ -87,8 +89,8 @@
               {{ form.bill_amt5 }}</th>
              </tr>
            </thead>
-  		  </table>
-  		  <table id="info3" class="display:flex" style="width:100%">
+  		  </table> -->
+  		  <!-- <table id="info3" class="display:flex" style="width:100%">
       			<thead>
       				<tr>
                 <th>{{ form.pay_amt1.errors }}
@@ -111,7 +113,7 @@
                 {{ form.pay_amt6 }}</th>
       				</tr>
       			</thead>
-      		</table>
+      		</table> -->
   		    <input class="submit" value="Submit" type="submit">
   		  </form>
   		</div>

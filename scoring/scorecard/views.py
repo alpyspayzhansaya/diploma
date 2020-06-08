@@ -11,6 +11,7 @@ from . import models
 def index(request):
     if request.method == 'POST':
         form = forms.ScoreForm(request.POST)
+
         if form.is_valid():
             limit_bal = form.cleaned_data['limit_bal']
             pay_0 = form.cleaned_data['pay_0']
@@ -61,7 +62,7 @@ def index(request):
                 education=form.cleaned_data['education'],
                 email=form.cleaned_data['email'],
                 phone_number=form.cleaned_data['phone_number'],
-                home_adress=form.cleaned_data['home_adress'],
+                home_address=form.cleaned_data['home_address'],
                 workplace=form.cleaned_data['workplace'],
                 income=form.cleaned_data['income'],
                 additional_income=form.cleaned_data['additional_income']
