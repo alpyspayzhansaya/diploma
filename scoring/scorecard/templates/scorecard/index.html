@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'scorecard/index.css' %}">
+  <title>Profile page</title>
+</head>
+
+<body>
+  <header class = "header">
+	<div class = "container">
+  		<div class= "inner">
+  			<a class= "logo" href=index.html>APPLICATION PAGE</a>
+  			<nav>
+  				<a class="nav_link" href=#>About us</a>
+  				<a class="nav_link" href=#>Service</a>
+  				<a class="nav_link" href=#>Blog</a>
+  				<a class="nav_link" href=#>Contact</a>
+  			</nav>
+		</div>
+  	</div>
+  </header>
+	<div class = "profile">
+  	<div class = "container">
+      <form id="formx">
+    		<h3><br> Please fill out all required fields</h3>
+        {% csrf_token %}
+        {{ form.name.errors }}
+        <label for="{{ form.name.id_for_label }}">Name </label>
+        {{ form.name }}
+        {{ form.surname.errors }}
+        <label for="{{ form.surname.id_for_label }}">Surname </label>
+        {{ form.surname }}
+        {{ form.age.errors }}
+        <label for="{{ form.age.id_for_label }}">Age </label>
+        {{ form.age }}
+        {{ form.gender.errors }}
+        <label for="{{ form.gender.id_for_label }}">Gender </label>
+        {{ form.gender }}
+        {{ form.iin.errors }}
+        <label for="{{ form.iin.id_for_label }}">Unique identification number </label>
+        {{ form.iin }}
+        {{ form.marriage.errors }}
+        <label for="{{ form.marriage.id_for_label }}">Marriage status </label>
+        {{ form.marriage }}
+        {{ form.education.errors }}
+        <label for="{{ form.education.id_for_label }}">Education </label>
+        {{ form.education }}
+        {{ form.email.errors }}
+        <label for="{{ form.email.id_for_label }}">Email </label>
+        {{ form.email }}
+        {{ form.phone_number.errors }}
+        <label for="{{ form.phone_number.id_for_label }}">Phone number </label>
+        {{ form.phone_number }}
+        {{ form.home_adress.errors }}
+        <label for="{{ form.home_adress.id_for_label }}">Address </label>
+        {{ form.home_adress }}
+        {{ form.workplace.errors }}
+        <label for="{{ form.workplace.id_for_label }}">Workplace </label>
+        {{ form.workplace }}
+        {{ form.income.errors }}
+        <label for="{{ form.income.id_for_label }}">Income </label>
+        {{ form.income }}
+        {{ form.additional_income.errors }}
+        <label for="{{ form.additional_income.id_for_label }}">Additional income </label>
+        {{ form.additional_income }}
+
+    		<table id="info1" class="display:flex" style="width:100%">
+    			<thead>
+    				<tr>
+    					<th>{{ form.limit_bal.errors }}
+              <label for="{{ form.limit_bal.id_for_label }}">Credit amount </label>
+              {{ form.limit_bal }}</th>
+              <th>{{ form.pay_0.errors }}
+              <label for="{{ form.pay_0.id_for_label }}">1st Payment status </label>
+              {{ form.pay_0 }}</th>
+              <th>{{ form.pay_2.errors }}
+              <label for="{{ form.pay_2.id_for_label }}">2nd Payment status </label>
+              {{ form.pay_2 }}</th>
+              <th>{{ form.pay_6.errors }}
+              <label for="{{ form.pay_6.id_for_label }}">3rd Payment status </label>
+              {{ form.pay_6 }}</th>
+              <th>{{ form.bill_amt5.errors }}
+              <label for="{{ form.bill_amt5.id_for_label }}">Amount of bill statement </label>
+              {{ form.bill_amt5 }}</th>
+             </tr>
+           </thead>
+  		  </table>
+  		  <table id="info3" class="display:flex" style="width:100%">
+      			<thead>
+      				<tr>
+                <th>{{ form.pay_amt1.errors }}
+                <label for="{{ form.pay_amt1.id_for_label }}">1st amount of previous payment </label>
+                {{ form.pay_amt1 }}</th>
+                <th>{{ form.pay_amt2.errors }}
+                <label for="{{ form.pay_amt2.id_for_label }}">2nd amount of previous payment </label>
+                {{ form.pay_amt2 }}</th>
+                <th>{{ form.pay_amt3.errors }}
+                <label for="{{ form.pay_amt3.id_for_label }}">3rd amount of previous payment </label>
+                {{ form.pay_amt3 }}</th>
+                <th>{{ form.pay_amt4.errors }}
+                <label for="{{ form.pay_amt4.id_for_label }}">4th amount of previous payment </label>
+                {{ form.pay_amt4 }}</th>
+                <th>{{ form.pay_amt5.errors }}
+                <label for="{{ form.pay_amt5.id_for_label }}">5th amount of previous payment </label>
+                {{ form.pay_amt5 }}</th>
+                <th>{{ form.pay_amt6.errors }}
+                <label for="{{ form.pay_amt6.id_for_label }}">6th amount of previous payment </label>
+                {{ form.pay_amt6 }}</th>
+      				</tr>
+      			</thead>
+      		</table>
+  		    <input class="submit" value="Submit" type="submit">
+  		  </form>
+  		</div>
+  	</div>
+		<footer class="footer" style='text-align: center'>Copyright ©2020 Score Card. All rights reserved. </footer>
+</body>
+
+</html>
