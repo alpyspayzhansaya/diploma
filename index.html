@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile page</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="script.js"></script>
+  
+  
+</head>
+<body>
+
+<header class = "header">
+	<div class = "container">
+		<div class= "inner">
+			<a class= "logo" href=index.html>APPLICATION PAGE</a>
+			
+			<nav>
+				<a class="nav_link" href=#>About us</a>
+				<a class="nav_link" href=#>Service</a>
+				<a class="nav_link" href=#>Blog</a>
+				<a class="nav_link" href=#>Contact</a>
+			</nav>
+		</div>
+	</div>
+</header>
+	<div class = "profile">
+	<div class = "container">
+		<form id="formx" onsubmit="call()"> 
+		<legend><br> Please fill out all required fields</legend>
+		
+		<input id="name" name="name" placeholder="Name" value="" type="text" required> 
+		<input id="surname" name="surname" placeholder="Surname" value="" type="text" required> 
+		<input id="age" name="age" placeholder="Age" type="number" required>
+		<label for="gender">Gender:</label><select id="gender" name="gender" required> <option label= "Male"></option> <option label= "Female"></option></select>
+		
+		<input id="id" name="id" placeholder="Unique identification number" type="text" required>
+		<label for="marriage">Marriage status:</label><select id="marriage" name="marriage" required><option label= "Choose marriage status"> <option label= "married"></option> <option label= "single"></option></select>
+		<label for="education">Education level:</label><select id="education" name="education" required> <option label= "Choose education degree"><option label= "associate"></option> <option label= "bachelor"></option> <option label= "master"></option> <option label= "doctor"></option></select>
+		<label for="phone">Phone number</label><input id="phone" name="phone" placeholder="8 XXX XXX XXXX" type="tel" pattern = "[8]{1} [0-9]{3} [0-9]{3} [0-9]{4}" required><span class="validity"></span>
+		<input id="email" name="email" placeholder="Email" type="text" required>	
+		<input id="address" name="address" placeholder="Address" type="text" required>
+		<input id="workplace" name="workplace" placeholder="Workplace" type="text" required>
+		<input id="income" name="income" placeholder="Income" type="number" required>
+		<input id="income-additional" name="income-additional"placeholder="Additional income" type="number" required>
+		<input id="credit" name="credit" value="" type="number" placeholder="Credit amount" required> 
+		
+
+		
+		<table id="info1" class="display style="width:100%">
+			<thead>
+				<tr>
+					<th>LIMIT_BAL</th>
+					<th>PAY_0</th>
+					<th>PAY_2</th>
+					<th>PAY_6</th>
+					<th>BILL_AMT5</th>
+					
+				</tr>
+			</thead>
+		<tbody>
+		<tr id= "repayment">
+		<td><input type= "text" id="LIMIT_BAL" name="LIMIT_BAL" required></td>
+		<td><input type= "text" id="PAY_0" name="PAY_0" required></td>
+		<td><input type= "text" id="PAY_2" name="PAY_2" required></td>
+		<td><input type= "text" id="PAY_6" name="PAY_6" required></td>
+		<td><input type= "text" id="PAY_5" name="BILL_AMT5" required></td>
+		
+		</tr>
+		</tbody>
+		</table>
+		
+		<table id="info3" class="display style="width:100%">
+			<thead>
+				<tr>
+					<th>PAY_AMT1</th>
+					<th>PAY_AMT2</th>
+					<th>PAY_AMT3</th>
+					<th>PAY_AMT4</th>
+					<th>PAY_AMT5</th>
+					<th>PAY_AMT6</th>
+				</tr>
+			</thead>
+		<tbody>
+		<tr id= "payment">
+		<td><input type= "text" id="PAY_AMT1" name="PAY_AMT1" required></td>
+		<td><input type= "text" id="PAY_AMT2" name="PAY_AMT2" required></td>
+		<td><input type= "text" id="PAY_AMT3" name="PAY_AMT3" required></td>
+		<td><input type= "text" id="PAY_AMT4" name="PAY_AMT4" required></td>
+		<td><input type= "text" id="PAY_AMT5" name="PAY_AMT5" required></td>
+		<td><input type= "text" id="PAY_AMT6" name="PAY_AMT6" required></td>
+		</tr>
+		</tbody>
+		</table>
+		<input class="submit" value="Submit" type="submit"> 
+		</form>
+		</div>
+	</div>
+	
+		
+		</div>
+		<footer class="footer">Copyright ©2020 Score Card. All rights reserved. </footer>
+</body>
+
+</html>
